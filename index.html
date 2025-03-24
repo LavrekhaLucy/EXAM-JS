@@ -6,24 +6,37 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exam</title>
-   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rest.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.mobile.css">
+    <link rel="stylesheet" href="style.tablet.css">
 </head>
 <body>
+
+<div class="wrapper">
     <h1>Test</h1>
 
+
     <div class="Add">
-        <label for="name">Name/Value Pair</label>
-        <input type="text" id="name" placeholder="Name/Value Pair">
-        <button>Add</button>
+        <form class="wrap" >
+         <label for="name">Name/Value Pair</label>
+         <input type="text" id="name" placeholder="Name=Value Pair">
+        </form>
+         <button>Add</button>
     </div>
 
     <div class="Sort">
-        <label for="nameList">Name/Value Pair List</label>
-        <input type="text" id="nameList" placeholder="Value Pair List">
-        <button>Sort by Name</button>
-        <button>Sort by Value</button>
-        <button>Delete</button>
+        <form class="anotherWrap">
+            <label for="nameList">Name/Value Pair List</label>
+            <input type="text" id="nameList">
+        </form>
+        <div class="btn">
+            <button>Sort by Name</button>
+            <button>Sort by Value</button>
+            <button>Delete</button>
+        </div>
     </div>
+</div>
 <script src="main.js"></script>
 </body>
 </html>

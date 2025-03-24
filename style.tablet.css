@@ -1,14 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-    body {
-        background: #718be1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+@media screen and (min-width: 481px) and (max-width: 768px){
 
     .wrapper {
-        width: 50vw;
+        width: 80vw;
         height: 80vh;
         display: flex;
         justify-content: center;
@@ -19,12 +12,13 @@
     }
 
     .Add {
-        width: 500px;
-        height: 60px;
+        width: 450px;
+        height: 40px;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 25px;
+        align-items: center;
+        /*gap: 23px ;*/
+
 
     }
 
@@ -33,30 +27,34 @@
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
+
     }
 
     input#name {
-        width: 400px;
-        height: 40px;
+        width: 300px;
+        height: 20px;
         border: solid 2px darkgrey;
+
     }
 
     .Add button {
-        width: 60px;
-        height: 40px;
-        margin-top: 18px;
-        margin-left: 20px;
+        width: 100px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
         border: solid 2px darkgrey;
         border-radius: 5px;
         /*background-color: rgb(248, 239, 239);*/
     }
 
     .Sort {
-        width: 500px;
-        height: 400px;
+        width: 450px;
+        height: 200px;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
+        /*gap: 20px;*/
 
     }
 
@@ -68,8 +66,8 @@
     }
 
     input#nameList {
-        width: 400px;
-        height: 340px;
+        width: 300px;
+        height: 170px;
         border: solid 2px darkgrey;
     }
 
@@ -81,12 +79,14 @@
     }
 
     .Sort button {
-        width: 120px;
-        height: 40px;
-        margin-top: 18px;
-        margin-left: 20px;
+        width: 100px;
+        height: 20px;
+        /*margin-top: 9px;*/
+        /*margin-left: 10px;*/
         border: solid 2px darkgrey;
         border-radius: 5px;
+        font-size: 14px;
         /*background-color: rgb(248, 239, 239);*/
     }
+}
 
