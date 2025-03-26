@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
     body {
-        background: #718be1;
+        background-image: url("https://i.pinimg.com/736x/99/78/bf/9978bf863b5f78505267b2dd785c06a0.jpg");
+        background-size: cover;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -14,13 +15,14 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: whitesmoke;
+        background-color: rgba(1, 0.5, 0, 0.5);
         border: solid 2px darkgrey;
+        gap: 15px;
     }
 
     .Add {
-        width: 500px;
-        height: 60px;
+        width: 600px;
+        height: 100px;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -28,49 +30,85 @@
 
     }
 
-    .wrap {
+    .span {
         display: flex;
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
-    }
 
-    input#name {
+    }
+    label {
+        color: white;
+    }
+     p, h2 {
+        color: white;
+    }
+    input#city {
         width: 400px;
-        height: 40px;
+        height: 50px;
         border: solid 2px darkgrey;
+        margin-top: 15px;
     }
 
     .Add button {
-        width: 60px;
+        width: 100px;
         height: 40px;
-        margin-top: 18px;
+        margin-top: 38px;
         margin-left: 20px;
         border: solid 2px darkgrey;
         border-radius: 5px;
-        /*background-color: rgb(248, 239, 239);*/
+
     }
 
     .Sort {
-        width: 500px;
-        height: 400px;
+        width: 600px;
+        height: 300px;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
 
     }
-
-    .anotherWrap {
+    .spanList{
         display: flex;
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
+
     }
 
-    input#nameList {
+    .List {
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        flex-direction: column;
         width: 400px;
-        height: 340px;
+        height: 240px;
         border: solid 2px darkgrey;
+        background: white;
+        margin-top: 15px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        overflow-y: auto;
+    }
+
+    li {
+        padding: 10px;
+        background: white;
+        margin: 5px 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 390px;
+
+
+    }
+
+    li.selected {
+        background-color: #7bb7c8;
     }
 
     .btn {
@@ -78,6 +116,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin-top: 25px;
     }
 
     .Sort button {
@@ -87,6 +126,6 @@
         margin-left: 20px;
         border: solid 2px darkgrey;
         border-radius: 5px;
-        /*background-color: rgb(248, 239, 239);*/
+
     }
 

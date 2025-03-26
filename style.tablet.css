@@ -22,7 +22,7 @@
 
     }
 
-    .wrap {
+    .form {
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -58,7 +58,7 @@
 
     }
 
-    .anotherWrap {
+    .List {
         display: flex;
         justify-content: center;
         align-items: flex-start;

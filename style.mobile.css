@@ -7,83 +7,132 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: whitesmoke;
+        background-image: url("https://oir.mobi/uploads/posts/2022-08/1661419604_11-oir-mobi-p-fon-zhovto-blakitnii-vkontakte-13.jpg");
+        background-size: cover;
         border: solid 2px darkgrey;
     }
 
     .Add {
         width: 350px;
-        height: 40px;
+        height: 80px;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
-        gap: 23px;
-
-
+        align-items: center;
+        margin-top: 30px;
     }
 
-    .wrap {
+    .span{
         display: flex;
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
     }
+    label {
+        color: black;
+    }
+    p, h2 {
+        color: black;
+    }
 
-    input#name {
+    input#city {
         width: 200px;
-        height: 20px;
+        height: 50px;
         border: solid 2px darkgrey;
+        font-size: 11px;
     }
 
     .Add button {
         width: 100px;
-        height: 20px;
+        height: 40px;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         border: solid 2px darkgrey;
         border-radius: 5px;
-        /*background-color: rgb(248, 239, 239);*/
+        font-size: 14px;
+
     }
 
     .Sort {
         width: 350px;
-        height: 200px;
+        height: 300px;
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        gap: 20px;
+        gap: 10px;
 
     }
 
-    .anotherWrap {
+    .spanList{
         display: flex;
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
+
     }
 
-    input#nameList {
-        width: 200px;
-        height: 170px;
-        border: solid 2px darkgrey;
+
+        .List {
+            display: flex;
+            justify-content: start;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 200px;
+            height: 240px;
+            border: solid 2px darkgrey;
+            background: white;
+            margin-top: 15px;
+        }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        overflow-y: auto;
     }
+
+    li {
+        /*padding: 10px;*/
+        background: white;
+        margin: 5px 0;
+        /*display: flex;*/
+        /*justify-content: space-evenly;*/
+        /*align-items: center;*/
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 190px;
+
+
+
+    }
+
+    li.selected {
+        background-color: #7bb7c8;
+    }
+
+    /*input#nameList {*/
+    /*    width: 200px;*/
+    /*    height: 170px;*/
+    /*    border: solid 2px darkgrey;*/
+    /*}*/
 
     .btn {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        width: 150px;
+        height: 240px;
+        gap: 20px;
     }
 
     .Sort button {
-        width: 100px;
-        height: 20px;
+        width: 120px;
+        height: 40px;
         /*margin-top: 9px;*/
         /*margin-left: 10px;*/
         border: solid 2px darkgrey;
         border-radius: 5px;
         font-size: 14px;
-        /*background-color: rgb(248, 239, 239);*/
+
     }
 }
