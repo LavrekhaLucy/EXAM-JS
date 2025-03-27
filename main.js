@@ -18,7 +18,7 @@ function addPair() {
     let result = validateInput(input);
 
     if (!result) {
-        alert("Неправильний формат! Використовуйте лише букви та цифри: ім'я = значення");
+        alert("Неправильний формат! Використовуйте лише букви та цифри: населений пункт = назва");
         return;
     }
 
@@ -55,8 +55,8 @@ function sortByValue() {
 }
 
 function deleteSelected() {
-    let listItems = document.querySelectorAll('#nameValueList li.selected');
+    let listItems = document.getElementsByClassName('selected');
     nameValuePairs = nameValuePairs.filter((_, index) => !listItems[index]);
-    updateList();
+    updateList(listItems);
 }
 

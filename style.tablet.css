@@ -1,4 +1,11 @@
 @media screen and (min-width: 481px) and (max-width: 768px){
+    body {
+        background-image: url("https://oir.mobi/uploads/posts/2022-08/1661419604_11-oir-mobi-p-fon-zhovto-blakitnii-vkontakte-13.jpg");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     .wrapper {
         width: 80vw;
@@ -7,68 +14,96 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: whitesmoke;
+        background-color: rgba(1, 0.5, 0, 0.5);
         border: solid 2px darkgrey;
+        border-radius: 5px;
+        gap: 40px;
     }
 
     .Add {
-        width: 450px;
-        height: 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        /*gap: 23px ;*/
-
-
-    }
-
-    .form {
+        width: 550px;
+        height: 90px;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
+        align-items: center;
+        gap: 35px;
 
     }
 
-    input#name {
-        width: 300px;
-        height: 20px;
+    .span {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+
+
+    }
+
+    input#city {
+        width: 350px;
+        height: 60px;
         border: solid 2px darkgrey;
 
     }
 
     .Add button {
-        width: 100px;
-        height: 20px;
+        width: 110px;
+        height: 55px;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         border: solid 2px darkgrey;
         border-radius: 5px;
-        /*background-color: rgb(248, 239, 239);*/
+
     }
 
+     label, p{
+         margin-left: 10px;
+     }
+
     .Sort {
-        width: 450px;
-        height: 200px;
+        width: 550px;
+        height: 400px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /*gap: 20px;*/
+        /*gap: 35px;*/
+
 
     }
 
     .List {
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: flex-start;
         flex-direction: column;
+        width: 350px;
+        height: 350px;
+        border: solid 2px darkgrey;
     }
 
-    input#nameList {
-        width: 300px;
-        height: 170px;
-        border: solid 2px darkgrey;
+    ul {
+        list-style: none;
+        padding: 0;
+        overflow-y: auto;
+    }
+
+    li {
+        padding: 10px;
+        background: white;
+        margin: 5px 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 345px;
+
+
+    }
+
+    li.selected {
+        background-color: #7bb7c8;
     }
 
     .btn {
@@ -76,17 +111,17 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        gap: 25px;
     }
 
     .Sort button {
-        width: 100px;
-        height: 20px;
-        /*margin-top: 9px;*/
-        /*margin-left: 10px;*/
+        width: 130px;
+        height: 60px;
         border: solid 2px darkgrey;
         border-radius: 5px;
         font-size: 14px;
-        /*background-color: rgb(248, 239, 239);*/
+
+
     }
 }
 
