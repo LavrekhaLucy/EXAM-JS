@@ -28,35 +28,38 @@ function addPair() {
 }
 
 function updateList() {
+
     let list = document.getElementById("nameValueList");
-    list.innerHTML = "";
-    nameValuePairs.forEach(pair  => {
+    list.innerText = "";
+    for (let i = 0; i < nameValuePairs.length; i++) {
+        let pair = nameValuePairs[i];
         let li = document.createElement("li");
-        li.textContent = `${pair.name} = ${pair.value}`;
+        li.innerText = `${pair.name} = ${pair.value}`;
         li.onclick = () => li.classList.toggle("selected");
-        list.appendChild(li);
-    });
+        list.appendChild(li);}
 }
 
 function sortByName() {
-     let sortName = nameValuePairs.sort((a, b) => {
-        if(a.name < b.name){return 1;}
-        if(a.name > b.name){return -1;}
+      nameValuePairs.sort((a, b) => {
+        if(a.name > b.name){return 1;}
+        if(a.name < b.name){return -1;}
         if(a.name === b.name){return 0;} });
-    updateList(sortName);
+    updateList();
 }
 
 function sortByValue() {
-     let sortValue = nameValuePairs.sort((a, b) => {
-        if(a.value < b.value){return 1;}
-        if(a.value> b.value){return -1;}
+     nameValuePairs.sort((a, b) => {
+        if(a.value > b.value){return 1;}
+        if(a.value < b.value){return -1;}
         if(a.value === b.value){return 0;} });
-    updateList(sortValue);
+    updateList();
 }
 
 function deleteSelected() {
-    let listItems = document.getElementsByClassName('selected');
-    nameValuePairs = nameValuePairs.filter((_, index) => !listItems[index]);
-    updateList(listItems);
+    document.querySelectorAll('.selected').forEach (element => element.remove());
 }
+
+
+
+
 
