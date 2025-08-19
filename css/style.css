@@ -1,25 +1,36 @@
-@media screen and (min-width: 0) and (max-width: 480px){
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    body {
+        background-image: url("https://diptaro.com/wp-content/uploads/2022/05/karta-Ukrainy-3.jpg");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     .wrapper {
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        max-width: 800px;
+        height: 70vh;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-image: url("https://oir.mobi/uploads/posts/2022-08/1661419604_11-oir-mobi-p-fon-zhovto-blakitnii-vkontakte-13.jpg");
-        background-size: cover;
+        background-color: rgba(1, 0.5, 0, 0.5);
         border: solid 2px darkgrey;
         border-radius: 5px;
+        gap: 35px;
+        padding: 20px;
     }
 
     .Add {
-        width: 350px;
-        height: 80px;
+        width: 700px;
+        height: 100px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 25px;
+
     }
 
     .span {
@@ -27,42 +38,45 @@
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
+
     }
 
     label {
-        color: black;
+        color: white;
+        margin-left: 10px;
     }
 
     p, h2 {
-        color: black;
+        color: white;
+        margin-left: 10px;
     }
 
     input#city {
-        width: 200px;
+        width: 400px;
+        min-width: 200px;
         height: 50px;
+
         border: solid 2px darkgrey;
-        font-size: 11px;
+        border-radius: 5px;
+        margin-top: 15px;
     }
 
     .Add button {
         width: 100px;
         height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-top: 38px;
+        margin-left: 20px;
         border: solid 2px darkgrey;
         border-radius: 5px;
-        font-size: 12px;
 
     }
 
     .Sort {
-        width: 350px;
+        width: 700px;
         height: 300px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-start;
-        gap: 10px;
 
     }
 
@@ -79,9 +93,10 @@
         justify-content: start;
         align-items: flex-start;
         flex-direction: column;
-        width: 200px;
+        width: 400px;
         height: 240px;
         border: solid 2px darkgrey;
+        border-radius: 5px;
         background: white;
         margin-top: 15px;
     }
@@ -93,11 +108,16 @@
     }
 
     li {
+        padding: 10px;
         background: white;
         margin: 5px 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         border: 1px solid #ddd;
         border-radius: 5px;
-        width: 195px;
+        width: 395px;
+
 
     }
 
@@ -110,18 +130,16 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 150px;
-        height: 240px;
-        gap: 20px;
+        margin-top: 25px;
     }
 
     .Sort button {
-        width: 120px;
-        height: 50px;
+        width: 150px;
+        height: 40px;
+        margin-top: 18px;
+        margin-left: 20px;
         border: solid 2px darkgrey;
         border-radius: 5px;
-        font-size: 12px;
-
 
     }
-}
+

@@ -1,6 +1,6 @@
 @media screen and (min-width: 481px) and (max-width: 768px){
     body {
-        background-image: url("https://oir.mobi/uploads/posts/2022-08/1661419604_11-oir-mobi-p-fon-zhovto-blakitnii-vkontakte-13.jpg");
+        background-image: url("https://mykyivregion.com.ua/imagecache/large/img/d1408bc37813e343f087517cfd399a891629706394.jpg");
         background-size: cover;
         display: flex;
         justify-content: center;
@@ -67,9 +67,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /*gap: 35px;*/
-
-
     }
 
     .List {
@@ -98,8 +95,6 @@
         border: 1px solid #ddd;
         border-radius: 5px;
         width: 345px;
-
-
     }
 
     li.selected {

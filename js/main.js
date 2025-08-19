@@ -39,26 +39,32 @@ function updateList() {
         list.appendChild(li);}
 }
 
-function sortByName() {
-      nameValuePairs.sort((a, b) => {
-        if(a.name > b.name){return 1;}
-        if(a.name < b.name){return -1;}
-        if(a.name === b.name){return 0;} });
+function sortBy(key) {
+    nameValuePairs.sort((a, b) => {
+        if (a[key] > b[key]) return 1;
+        if (a[key] < b[key]) return -1;
+        return 0;
+    });
     updateList();
 }
 
-function sortByValue() {
-     nameValuePairs.sort((a, b) => {
-        if(a.value > b.value){return 1;}
-        if(a.value < b.value){return -1;}
-        if(a.value === b.value){return 0;} });
-    updateList();
-}
+sortBy("name");
+sortBy("value");
+
 
 function deleteSelected() {
-    document.querySelectorAll('.selected').forEach (element => element.remove());
-}
+    const list = document.getElementById("nameValueList");
+    const items = Array.from(list.children);
 
+    items.forEach((li, index) => {
+        if (li.classList.contains("selected")) {
+
+            nameValuePairs.splice(index, 1);
+        }
+    });
+
+    updateList();
+}
 
 
 

@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exam</title>
-    <link rel="stylesheet" href="rest.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.mobile.css">
-    <link rel="stylesheet" href="style.tablet.css">
+    <link rel="stylesheet" href="css/rest.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.mobile.css">
+    <link rel="stylesheet" href="css/style.tablet.css">
 </head>
 <body>
 
@@ -34,13 +34,17 @@
         </div>
 
         <div class="btn">
-            <button onclick="sortByName()">Сортувати за населеним пунктом</button>
-            <button onclick="sortByValue()">Сортувати за назвою</button>
+            <button onclick="sortBy('name')">Сортувати за населеним пунктом</button>
+            <button onclick="sortBy('value')">Сортувати за назвою</button>
             <button id="dltBtn" onclick="deleteSelected()">Видалити</button>
         </div>
     </div>
 </div>
 
-<script src="main.js"></script>
+
+
+
+
+<script src="js/main.js"></script>
 </body>
 </html>
