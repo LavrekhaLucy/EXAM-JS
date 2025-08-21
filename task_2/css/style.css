@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.users-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.user-card {
+    background: #f3f0f0;
+    border: 2px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
