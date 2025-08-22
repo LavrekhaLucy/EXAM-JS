@@ -1,18 +1,18 @@
-        const url = new URL(window.location.href);
-        const userId = url.searchParams.get("id");
+const url = new URL(window.location.href);
+const userId = url.searchParams.get("id");
 
-        const userDetails = document.getElementById("user-details");
-        const postsContainer = document.getElementById("posts");
-        const loadPostsBtn = document.getElementById("load-posts");
+const userDetails = document.getElementById("user-details");
+const postsContainer = document.getElementById("posts");
+const loadPostsBtn = document.getElementById("load-posts");
 
 
-        fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-            .then(res => res.json())
-            .then(user => {
-                let userInfo = document.createElement('div');
-                userInfo.className = 'user-info';
+fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+    .then(res => res.json())
+    .then(user => {
+        let userInfo = document.createElement('div');
+        userInfo.className = 'user-info';
 
-                userInfo.innerText = `
+        userInfo.innerText = `
         ID: ${user.id}
         Name: ${user.name}
         Username: ${user.username}
@@ -33,29 +33,29 @@
         BS: ${user.company.bs}
                 `;
 
-                userDetails.appendChild(userInfo);
-            });
+        userDetails.appendChild(userInfo);
+    });
 
 
-        loadPostsBtn.addEventListener("click", () => {
-            fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
-                .then(res => res.json())
-                .then(posts => {
-                    postsContainer.innerText = "";
-                        for(const post of posts) {
-                            let postDiv = document.createElement("div");
-                            postDiv.className = "post-card";
+loadPostsBtn.addEventListener("click", () => {
+    fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
+        .then(res => res.json())
+        .then(posts => {
+            postsContainer.innerText = "";
+            for (const post of posts) {
+                let postDiv = document.createElement("div");
+                postDiv.className = "post-card";
 
-                            let title = document.createElement("h3");
-                            title.innerText = post.title;
+                let title = document.createElement("h3");
+                title.innerText = post.title;
 
-                            let link = document.createElement("a");
-                            link.href = `post-details.html?id=${post.id}`;
-                            link.innerText = "Post details";
+                let link = document.createElement("a");
+                link.href = `post-details.html?id=${post.id}`;
+                link.innerText = "Post details";
 
-                            postDiv.append(title, link);
-                            postsContainer.appendChild(postDiv);
-                        }
-                    });
-                });
+                postDiv.append(title, link);
+                postsContainer.appendChild(postDiv);
+            }
+        });
+});
 
