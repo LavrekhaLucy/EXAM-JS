@@ -15,15 +15,17 @@
                 let h3 = document.createElement('h3');
                 h3.innerText = user.name;
 
+                let button = document.createElement('button');
+                button.className = 'btn wide';
 
 
                 let link = document.createElement("a");
                 link.href = `user-details.html?id=${user.id}`;
-                link.innerText = "Деталі користувача";
+                link.innerText = "User details";
                 link.className = "user-link";
 
-
-                cartDiv.append(p,h3,link);
+button.appendChild(link);
+                cartDiv.append(p,h3,button);
                 usersContainer.appendChild( cartDiv);
 
                 console.log(user);
