@@ -39,18 +39,23 @@ function updateList() {
         list.appendChild(li);}
 }
 
+
 function sortBy(key) {
     nameValuePairs.sort((a, b) => {
-        if (a[key] > b[key]) return 1;
-        if (a[key] < b[key]) return -1;
-        return 0;
+        const valueA = a[key];
+        const valueB = b[key];
+
+        const numberA = Number(valueA);
+        const numberB = Number(valueB);
+
+        if (!isNaN(numberA) && !isNaN(numberB)) {
+            return numberA - numberB;
+        }
+        return String(valueA).localeCompare(String(valueB));
     });
+
     updateList();
 }
-
-sortBy("name");
-sortBy("value");
-
 
 function deleteSelected() {
     const list = document.getElementById("nameValueList");

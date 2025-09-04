@@ -9,30 +9,26 @@ const loadPostsBtn = document.getElementById("load-posts");
 fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
     .then(res => res.json())
     .then(user => {
-        let userInfo = document.createElement('div');
+        const userInfo = document.createElement('div');
         userInfo.className = 'user-info';
 
-        userInfo.innerText = `
-        ID: ${user.id}
-        Name: ${user.name}
-        Username: ${user.username}
-        Email: ${user.email}
-        Phone: ${user.phone}
-        Website: ${user.website}
-        
-        --- Address ---
-        Street: ${user.address.street}
-        Suite: ${user.address.suite}
-        City: ${user.address.city}
-        Zipcode: ${user.address.zipcode}
-        Geo: lat=${user.address.geo.lat}, lng=${user.address.geo.lng}
-        
-        --- Company ---
-        Name: ${user.company.name}
-        CatchPhrase: ${user.company.catchPhrase}
-        BS: ${user.company.bs}
-                `;
+        function renderObject(obj, index = 0) {
+            let text = '';
+            const spacing = '  '.repeat(index);
 
+            for (const key in obj) {
+                if (typeof obj[key] === 'object' && obj[key] !== null) {
+                    text += `${spacing}--- ${key} ---\n`;
+                    text += renderObject(obj[key], index + 1);
+                } else {
+                    text += `${spacing}${key}: ${obj[key]}\n`;
+                }
+            }
+
+            return text;
+        }
+
+        userInfo.innerText = renderObject(user);
         userDetails.appendChild(userInfo);
     });
 

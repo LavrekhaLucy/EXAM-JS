@@ -9,38 +9,31 @@ loadCommentsBtn = document.getElementById("load-comments");
 fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
     .then(res => res.json())
     .then(post => {
-
-        let postDiv = document.createElement("div");
+        const postDiv = document.createElement("div");
         postDiv.className = "post-div";
-        postDiv.innerText = `
-                   Id:${post.id}
-                   Title:${post.title}
-                   Body:${post.body}
-                `;
+
+        for (const key in post) {
+            postDiv.innerText += `${key}: ${post[key]} \n`;
+        }
 
         postsDetails.appendChild(postDiv);
+    });
 
-    })
 
 loadCommentsBtn.addEventListener("click", () => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
         .then(res => res.json())
         .then(comments => {
-            commentsContainer.innerText = "";
 
             for (const comment of comments) {
 
                 let commentDiv = document.createElement("div");
                 commentDiv.className = "comment-card";
-                commentDiv.innerText = `
-                    PostId: ${postId}
-                    Id: ${postId}
-                    Name:${comment.name}
-                    Body:${comment.body}
-                    Email:${comment.email}
-                    `
-                commentsContainer.appendChild(commentDiv);
 
+                for (const key in comment) {
+                    commentDiv.innerText += `${key}: ${comment[key]}\n`;
+                }
+                commentsContainer.appendChild(commentDiv);
             }
 
         });
