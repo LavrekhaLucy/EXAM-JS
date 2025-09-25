@@ -61,12 +61,14 @@ function deleteSelected() {
     const list = document.getElementById("nameValueList");
     const items = Array.from(list.children);
 
-    items.forEach((li, index) => {
-        if (li.classList.contains("selected")) {
+    // for (let i =  items.length - 1; i >= 0; i--) {
+    //    if(items[i].classList.contains("selected")){
+    //        nameValuePairs.splice(i, 1);
+    //    }
+    //
+    // }
 
-            nameValuePairs.splice(index, 1);
-        }
-    });
+    nameValuePairs = nameValuePairs.filter((_, i) => !items[i].classList.contains("selected"));
 
     updateList();
 }
